@@ -38,7 +38,7 @@ export default function Courses() {
       headerName: "Options",
       width: 100,
       getActions: (params) => [
-          <Link href={{
+          <Link key={params.id} href={{
             pathname: '/courses/[courseId]',
             query: { courseId: params.id },
           }}>Detail</Link>

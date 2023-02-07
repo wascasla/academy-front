@@ -43,7 +43,7 @@ export default function Courses() {
       headerName: "Options",
       width: 100,
       getActions: (params) => [
-          <Link href={{
+          <Link key={params.id} href={{
             pathname: '/students/[studentId]',
             query: { studentId: params.id },
           }}>Detail</Link>
@@ -55,7 +55,6 @@ export default function Courses() {
     const response = await students.getAllStudents({
       "name": ""
     });
-    console.log("getStudents",response)
     setCoursesList(response.data.data)
   }
 
