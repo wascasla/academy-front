@@ -54,6 +54,10 @@ export default function Courses() {
   useEffect(() => {
     getCourses()
   }, [])
+
+  const goToAddCourse = () => {
+    router.push("/courses/add");
+  }
   
 
   return (
@@ -61,7 +65,7 @@ export default function Courses() {
       <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
         <Title>Courses</Title>
         <Grid item xs={12}>
-          <Button style={{marginBottom:"1em"}} variant="contained">Add</Button>
+          <Button style={{marginBottom:"1em"}} onClick={goToAddCourse} variant="contained">Add</Button>
         </Grid>
         <Grid item xs={12}>
           <DataTable

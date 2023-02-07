@@ -10,7 +10,7 @@ export default {
   },
 
   createCourse: function (data) {
-    return api.post(`/api/course`, data);
+    return api.post(`/api/course/create`, data);
   },
 
   updateCourse: function (data) {
